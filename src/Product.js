@@ -25,7 +25,7 @@ class Product extends Component {
     // .then((res) => console.log(res.data))
     .then((res) => 
         res.data.response.videos.map(data => (        
-          console.log(data),
+          // console.log(data),        
           cards.push(data),
           this.setState({ card: data })
         )
@@ -53,7 +53,7 @@ class Product extends Component {
             {cards.map(card => (
                 <div class="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd" >                
                 <Card name={card.title}
-                      cover_img={card.preview_url}
+                      cover_img={card.preview_url.replace("https","http")}
                       sub_name={card.viewnumber}
                       ext_link={card.embedded_url}                                          
                       fps = {card.framerate}

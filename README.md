@@ -1,5 +1,5 @@
 # GFS 2: Web devlopment with react
-
+For learning purpose.
 ## How to run 
 ```sh
 $ npm start
